@@ -72,22 +72,140 @@ $(function() {
   <div class="headertitle"><div class="title">VkInfo::MetricsLogger Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Periodically logs metric values to a file.  
+ <a href="../../d1/d11/classVkInfo_1_1MetricsLogger.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d6/d02/metrics__logger_8h_source.html">metrics_logger.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9dd1e0094cf86b2457b6d7780dfd9594"><td class="memItemLeft" align="right" valign="top"><a id="a9dd1e0094cf86b2457b6d7780dfd9594" name="a9dd1e0094cf86b2457b6d7780dfd9594"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>MetricsLogger</b> (<a class="el" href="../../d7/dfd/classVkInfo_1_1MetricsRegistry.html">MetricsRegistry</a> &amp;registry, const std::string &amp;filename, std::chrono::milliseconds interval)</td></tr>
+<tr class="memitem:a9dd1e0094cf86b2457b6d7780dfd9594"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d11/classVkInfo_1_1MetricsLogger.html#a9dd1e0094cf86b2457b6d7780dfd9594">MetricsLogger</a> (<a class="el" href="../../d7/dfd/classVkInfo_1_1MetricsRegistry.html">MetricsRegistry</a> &amp;registry, const std::string &amp;filename, std::chrono::milliseconds interval)</td></tr>
+<tr class="memdesc:a9dd1e0094cf86b2457b6d7780dfd9594"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="../../d1/d11/classVkInfo_1_1MetricsLogger.html" title="Periodically logs metric values to a file.">MetricsLogger</a> instance.  <a href="../../d1/d11/classVkInfo_1_1MetricsLogger.html#a9dd1e0094cf86b2457b6d7780dfd9594">More...</a><br /></td></tr>
 <tr class="separator:a9dd1e0094cf86b2457b6d7780dfd9594"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68b364cce16ba7fdff9fa5838b463be0"><td class="memItemLeft" align="right" valign="top"><a id="a68b364cce16ba7fdff9fa5838b463be0" name="a68b364cce16ba7fdff9fa5838b463be0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>start</b> ()</td></tr>
+<tr class="memitem:af642edaf99ccaa5a1b399b8f5a62acb1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d11/classVkInfo_1_1MetricsLogger.html#af642edaf99ccaa5a1b399b8f5a62acb1">~MetricsLogger</a> ()</td></tr>
+<tr class="memdesc:af642edaf99ccaa5a1b399b8f5a62acb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor for <a class="el" href="../../d1/d11/classVkInfo_1_1MetricsLogger.html" title="Periodically logs metric values to a file.">MetricsLogger</a>.  <a href="../../d1/d11/classVkInfo_1_1MetricsLogger.html#af642edaf99ccaa5a1b399b8f5a62acb1">More...</a><br /></td></tr>
+<tr class="separator:af642edaf99ccaa5a1b399b8f5a62acb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68b364cce16ba7fdff9fa5838b463be0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d11/classVkInfo_1_1MetricsLogger.html#a68b364cce16ba7fdff9fa5838b463be0">start</a> ()</td></tr>
+<tr class="memdesc:a68b364cce16ba7fdff9fa5838b463be0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the background logging thread.  <a href="../../d1/d11/classVkInfo_1_1MetricsLogger.html#a68b364cce16ba7fdff9fa5838b463be0">More...</a><br /></td></tr>
 <tr class="separator:a68b364cce16ba7fdff9fa5838b463be0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5450a99fc3b825bc5c352d165e5163cb"><td class="memItemLeft" align="right" valign="top"><a id="a5450a99fc3b825bc5c352d165e5163cb" name="a5450a99fc3b825bc5c352d165e5163cb"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>stop</b> ()</td></tr>
+<tr class="memdesc:a5450a99fc3b825bc5c352d165e5163cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops the background logging thread safely. <br /></td></tr>
 <tr class="separator:a5450a99fc3b825bc5c352d165e5163cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a834a943fb5762b51b30a378d7c5aa7f8"><td class="memItemLeft" align="right" valign="top"><a id="a834a943fb5762b51b30a378d7c5aa7f8" name="a834a943fb5762b51b30a378d7c5aa7f8"></a>
-std::vector&lt; std::shared_ptr&lt; <a class="el" href="../../df/d52/classVkInfo_1_1IMetric.html">IMetric</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>get_all_metrics</b> ()</td></tr>
+<tr class="memitem:a834a943fb5762b51b30a378d7c5aa7f8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="../../df/d52/classVkInfo_1_1IMetric.html">IMetric</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d11/classVkInfo_1_1MetricsLogger.html#a834a943fb5762b51b30a378d7c5aa7f8">get_all_metrics</a> ()</td></tr>
+<tr class="memdesc:a834a943fb5762b51b30a378d7c5aa7f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves all currently registered metrics from the registry.  <a href="../../d1/d11/classVkInfo_1_1MetricsLogger.html#a834a943fb5762b51b30a378d7c5aa7f8">More...</a><br /></td></tr>
 <tr class="separator:a834a943fb5762b51b30a378d7c5aa7f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Periodically logs metric values to a file. </p>
+<p ><a class="el" href="../../d1/d11/classVkInfo_1_1MetricsLogger.html" title="Periodically logs metric values to a file.">MetricsLogger</a> runs in a background thread, collecting metric values from a <a class="el" href="../../d7/dfd/classVkInfo_1_1MetricsRegistry.html" title="Registry for managing and storing metrics.">MetricsRegistry</a> at fixed intervals and writing them to a log file with timestamps. After logging, each metric is reset. This logger is thread-safe and non-blocking for metric producers. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a9dd1e0094cf86b2457b6d7780dfd9594" name="a9dd1e0094cf86b2457b6d7780dfd9594"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dd1e0094cf86b2457b6d7780dfd9594">&#9670;&nbsp;</a></span>MetricsLogger()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">VkInfo::MetricsLogger::MetricsLogger </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d7/dfd/classVkInfo_1_1MetricsRegistry.html">MetricsRegistry</a> &amp;&#160;</td>
+          <td class="paramname"><em>registry</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::chrono::milliseconds&#160;</td>
+          <td class="paramname"><em>interval</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="../../d1/d11/classVkInfo_1_1MetricsLogger.html" title="Periodically logs metric values to a file.">MetricsLogger</a> instance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">registry</td><td>Reference to the <a class="el" href="../../d7/dfd/classVkInfo_1_1MetricsRegistry.html" title="Registry for managing and storing metrics.">MetricsRegistry</a> containing all metrics to log. </td></tr>
+    <tr><td class="paramname">filename</td><td>Name of the file to write log entries to. </td></tr>
+    <tr><td class="paramname">interval</td><td>Logging interval (e.g., every second). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af642edaf99ccaa5a1b399b8f5a62acb1" name="af642edaf99ccaa5a1b399b8f5a62acb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af642edaf99ccaa5a1b399b8f5a62acb1">&#9670;&nbsp;</a></span>~MetricsLogger()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">VkInfo::MetricsLogger::~MetricsLogger </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destructor for <a class="el" href="../../d1/d11/classVkInfo_1_1MetricsLogger.html" title="Periodically logs metric values to a file.">MetricsLogger</a>. </p>
+<p >Ensures the background thread is stopped before destruction. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a834a943fb5762b51b30a378d7c5aa7f8" name="a834a943fb5762b51b30a378d7c5aa7f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a834a943fb5762b51b30a378d7c5aa7f8">&#9670;&nbsp;</a></span>get_all_metrics()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::shared_ptr&lt; <a class="el" href="../../df/d52/classVkInfo_1_1IMetric.html">IMetric</a> &gt; &gt; VkInfo::MetricsLogger::get_all_metrics </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves all currently registered metrics from the registry. </p>
+<dl class="section return"><dt>Returns</dt><dd>A vector of shared pointers to <a class="el" href="../../df/d52/classVkInfo_1_1IMetric.html" title="Interface for all metric types.">IMetric</a> instances. </dd></dl>
+
+</div>
+</div>
+<a id="a68b364cce16ba7fdff9fa5838b463be0" name="a68b364cce16ba7fdff9fa5838b463be0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68b364cce16ba7fdff9fa5838b463be0">&#9670;&nbsp;</a></span>start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VkInfo::MetricsLogger::start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Starts the background logging thread. </p>
+<p >Logs metric data to the file at the specified interval. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/leonid/Projects/VKInfo/VKInfoLib/include/<a class="el" href="../../d6/d02/metrics__logger_8h_source.html">metrics_logger.h</a></li>
 <li>/home/leonid/Projects/VKInfo/VKInfoLib/src/metrics_logger.cc</li>

@@ -1,5 +1,7 @@
 # 🔍 VKInfo — Metrics Scraping Library
 
+Asyncronous metrics scraper library written in C++
+Uses Qt5 for showcasing performance
 
 ---
 

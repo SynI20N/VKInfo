@@ -72,28 +72,132 @@ $(function() {
   <div class="headertitle"><div class="title">VkInfo::IMetric Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Interface for all metric types.  
+ <a href="../../df/d52/classVkInfo_1_1IMetric.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d2/dbf/metric_8h_source.html">metric.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for VkInfo::IMetric:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d9/d05/classVkInfo_1_1IMetric__inherit__graph.png" border="0" usemap="#aVkInfo_1_1IMetric_inherit__map" alt="Inheritance graph"/></div>
 <map name="aVkInfo_1_1IMetric_inherit__map" id="aVkInfo_1_1IMetric_inherit__map">
-<area shape="rect" title=" " alt="" coords="40,5,148,32"/>
-<area shape="rect" href="../../d1/db0/classVkInfo_1_1AtomicMetric.html" title=" " alt="" coords="5,80,183,107"/>
+<area shape="rect" title="Interface for all metric types." alt="" coords="40,5,148,32"/>
+<area shape="rect" href="../../d1/db0/classVkInfo_1_1AtomicMetric.html" title="A thread&#45;safe metric implementation using atomic variables." alt="" coords="5,80,183,107"/>
 </map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afb68b14804249b7dc087202502152f7b"><td class="memItemLeft" align="right" valign="top"><a id="afb68b14804249b7dc087202502152f7b" name="afb68b14804249b7dc087202502152f7b"></a>
-virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>get_name</b> () const =0</td></tr>
+<tr class="memitem:a32ae9af2bb82d9ffa9ab6edb609a7732"><td class="memItemLeft" align="right" valign="top"><a id="a32ae9af2bb82d9ffa9ab6edb609a7732" name="a32ae9af2bb82d9ffa9ab6edb609a7732"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~IMetric</b> ()=default</td></tr>
+<tr class="memdesc:a32ae9af2bb82d9ffa9ab6edb609a7732"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor for safe polymorphic deletion. <br /></td></tr>
+<tr class="separator:a32ae9af2bb82d9ffa9ab6edb609a7732"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb68b14804249b7dc087202502152f7b"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d52/classVkInfo_1_1IMetric.html#afb68b14804249b7dc087202502152f7b">get_name</a> () const =0</td></tr>
+<tr class="memdesc:afb68b14804249b7dc087202502152f7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of the metric.  <a href="../../df/d52/classVkInfo_1_1IMetric.html#afb68b14804249b7dc087202502152f7b">More...</a><br /></td></tr>
 <tr class="separator:afb68b14804249b7dc087202502152f7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2068e51e1eddfd39df8e2a7cdd4fbcc9"><td class="memItemLeft" align="right" valign="top"><a id="a2068e51e1eddfd39df8e2a7cdd4fbcc9" name="a2068e51e1eddfd39df8e2a7cdd4fbcc9"></a>
-virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>get_value_and_reset</b> ()=0</td></tr>
+<tr class="memitem:a2068e51e1eddfd39df8e2a7cdd4fbcc9"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d52/classVkInfo_1_1IMetric.html#a2068e51e1eddfd39df8e2a7cdd4fbcc9">get_value_and_reset</a> ()=0</td></tr>
+<tr class="memdesc:a2068e51e1eddfd39df8e2a7cdd4fbcc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the current value of the metric and resets it.  <a href="../../df/d52/classVkInfo_1_1IMetric.html#a2068e51e1eddfd39df8e2a7cdd4fbcc9">More...</a><br /></td></tr>
 <tr class="separator:a2068e51e1eddfd39df8e2a7cdd4fbcc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7e689de01b1de582f87a08da218caf8"><td class="memItemLeft" align="right" valign="top"><a id="ab7e689de01b1de582f87a08da218caf8" name="ab7e689de01b1de582f87a08da218caf8"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>set_random_value</b> ()=0</td></tr>
+<tr class="memitem:ab7e689de01b1de582f87a08da218caf8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d52/classVkInfo_1_1IMetric.html#ab7e689de01b1de582f87a08da218caf8">set_random_value</a> ()=0</td></tr>
+<tr class="memdesc:ab7e689de01b1de582f87a08da218caf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns a new random value to the metric.  <a href="../../df/d52/classVkInfo_1_1IMetric.html#ab7e689de01b1de582f87a08da218caf8">More...</a><br /></td></tr>
 <tr class="separator:ab7e689de01b1de582f87a08da218caf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Interface for all metric types. </p>
+<p >The <a class="el" href="../../df/d52/classVkInfo_1_1IMetric.html" title="Interface for all metric types.">IMetric</a> interface defines the basic operations that all metrics must implement. Metrics represent named values that can be updated over time and periodically reported or reset. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="afb68b14804249b7dc087202502152f7b" name="afb68b14804249b7dc087202502152f7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb68b14804249b7dc087202502152f7b">&#9670;&nbsp;</a></span>get_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string VkInfo::IMetric::get_name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the name of the metric. </p>
+<dl class="section return"><dt>Returns</dt><dd>A string containing the metric's name. </dd></dl>
+
+<p>Implemented in <a class="el" href="../../d1/db0/classVkInfo_1_1AtomicMetric.html#acacb7ad7f17f3b0d855a9f31a6d517f1">VkInfo::AtomicMetric&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a2068e51e1eddfd39df8e2a7cdd4fbcc9" name="a2068e51e1eddfd39df8e2a7cdd4fbcc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2068e51e1eddfd39df8e2a7cdd4fbcc9">&#9670;&nbsp;</a></span>get_value_and_reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string VkInfo::IMetric::get_value_and_reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves the current value of the metric and resets it. </p>
+<p >This method is typically called periodically (e.g., by a logger) to capture and clear the accumulated value.</p>
+<dl class="section return"><dt>Returns</dt><dd>The value of the metric as a string. </dd></dl>
+
+<p>Implemented in <a class="el" href="../../d1/db0/classVkInfo_1_1AtomicMetric.html#a6ea8de63ea21c4d6a8e3c30838e381db">VkInfo::AtomicMetric&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a id="ab7e689de01b1de582f87a08da218caf8" name="ab7e689de01b1de582f87a08da218caf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7e689de01b1de582f87a08da218caf8">&#9670;&nbsp;</a></span>set_random_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void VkInfo::IMetric::set_random_value </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Assigns a new random value to the metric. </p>
+<p >This method is primarily used for testing or demonstration purposes. </p>
+
+<p>Implemented in <a class="el" href="../../d1/db0/classVkInfo_1_1AtomicMetric.html#a61b2df3c0774404fb9354887e37584ad">VkInfo::AtomicMetric&lt; T &gt;</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/leonid/Projects/VKInfo/VKInfoLib/include/<a class="el" href="../../d2/dbf/metric_8h_source.html">metric.h</a></li>
 </ul>

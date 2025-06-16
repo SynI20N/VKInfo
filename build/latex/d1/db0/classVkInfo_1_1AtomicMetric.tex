@@ -2,7 +2,17 @@
 \label{classVkInfo_1_1AtomicMetric}\index{VkInfo::AtomicMetric$<$ T $>$@{VkInfo::AtomicMetric$<$ T $>$}}
 
 
-Inheritance diagram for Vk\+Info\+::Atomic\+Metric\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\nopagebreak
+A thread-\/safe metric implementation using atomic variables.  
+
+
+
+
+{\ttfamily \#include $<$atomic\+\_\+metric.\+h$>$}
+
+
+
+Inheritance diagram for Vk\+Info\+::Atomic\+Metric\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -11,7 +21,8 @@ Inheritance diagram for Vk\+Info\+::Atomic\+Metric\texorpdfstring{$<$}{<} T \tex
 \end{figure}
 
 
-Collaboration diagram for Vk\+Info\+::Atomic\+Metric\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\nopagebreak
+Collaboration diagram for Vk\+Info\+::Atomic\+Metric\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,18 +32,53 @@ Collaboration diagram for Vk\+Info\+::Atomic\+Metric\texorpdfstring{$<$}{<} T \t
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classVkInfo_1_1AtomicMetric_a843321c95153d0506e7ce47600a9959f}\label{classVkInfo_1_1AtomicMetric_a843321c95153d0506e7ce47600a9959f}} 
-{\bfseries Atomic\+Metric} (const std\+::string \&name, T max, T min)
-\item 
-\mbox{\Hypertarget{classVkInfo_1_1AtomicMetric_abad98195d5732557f8120035519e19b7}\label{classVkInfo_1_1AtomicMetric_abad98195d5732557f8120035519e19b7}} 
-void {\bfseries set} (T value)
-\item 
+\mbox{\hyperlink{classVkInfo_1_1AtomicMetric_a843321c95153d0506e7ce47600a9959f}{Atomic\+Metric}} (const std\+::string \&name, T max, T min)
+\begin{DoxyCompactList}\small\item\em Constructs an atomic metric with the given name and allowed range. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVkInfo_1_1AtomicMetric_abad98195d5732557f8120035519e19b7}{set}} (T value)
+\begin{DoxyCompactList}\small\item\em Sets the metric to a specific value. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classVkInfo_1_1AtomicMetric_a61b2df3c0774404fb9354887e37584ad}{set\+\_\+random\+\_\+value}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em Sets the metric to a randomly generated value within its valid range. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classVkInfo_1_1AtomicMetric_acacb7ad7f17f3b0d855a9f31a6d517f1}{get\+\_\+name}} () const override
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the name of the metric. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classVkInfo_1_1AtomicMetric_a6ea8de63ea21c4d6a8e3c30838e381db}{get\+\_\+value\+\_\+and\+\_\+reset}} () override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Returns the current value and resets it to zero atomically. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Vk\+Info\+::\+Atomic\+Metric$<$ T $>$}
+A thread-\/safe metric implementation using atomic variables. 
+
+\mbox{\hyperlink{classVkInfo_1_1AtomicMetric}{Atomic\+Metric}} represents a numeric metric (e.\+g., CPU usage, request count) that can be safely updated and accessed across multiple threads. It supports setting values directly or assigning a random value within a defined range. Upon retrieval via \mbox{\hyperlink{classVkInfo_1_1AtomicMetric_a6ea8de63ea21c4d6a8e3c30838e381db}{get\+\_\+value\+\_\+and\+\_\+reset()}}, the value is reset.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The numeric type of the metric (e.\+g., int, float, double). \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classVkInfo_1_1AtomicMetric_a843321c95153d0506e7ce47600a9959f}\label{classVkInfo_1_1AtomicMetric_a843321c95153d0506e7ce47600a9959f}} 
+\index{VkInfo::AtomicMetric$<$ T $>$@{VkInfo::AtomicMetric$<$ T $>$}!AtomicMetric@{AtomicMetric}}
+\index{AtomicMetric@{AtomicMetric}!VkInfo::AtomicMetric$<$ T $>$@{VkInfo::AtomicMetric$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{AtomicMetric()}{AtomicMetric()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classVkInfo_1_1AtomicMetric}{Vk\+Info\+::\+Atomic\+Metric}}$<$ T $>$\+::\+Atomic\+Metric (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{T}]{max,  }\item[{T}]{min }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs an atomic metric with the given name and allowed range. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the metric. \\
+\hline
+{\em max} & Maximum allowed value for the metric. \\
+\hline
+{\em min} & Minimum allowed value for the metric. \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
@@ -45,7 +91,14 @@ std\+::string \mbox{\hyperlink{classVkInfo_1_1AtomicMetric}{Vk\+Info\+::\+Atomic
 
 
 
-Implements \mbox{\hyperlink{classVkInfo_1_1IMetric}{Vk\+Info\+::\+IMetric}}.
+Returns the name of the metric. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string The metric name. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classVkInfo_1_1IMetric_afb68b14804249b7dc087202502152f7b}{Vk\+Info\+::\+IMetric}}.
 
 \mbox{\Hypertarget{classVkInfo_1_1AtomicMetric_a6ea8de63ea21c4d6a8e3c30838e381db}\label{classVkInfo_1_1AtomicMetric_a6ea8de63ea21c4d6a8e3c30838e381db}} 
 \index{VkInfo::AtomicMetric$<$ T $>$@{VkInfo::AtomicMetric$<$ T $>$}!get\_value\_and\_reset@{get\_value\_and\_reset}}
@@ -56,8 +109,36 @@ std\+::string \mbox{\hyperlink{classVkInfo_1_1AtomicMetric}{Vk\+Info\+::\+Atomic
 
 
 
-Implements \mbox{\hyperlink{classVkInfo_1_1IMetric}{Vk\+Info\+::\+IMetric}}.
+Returns the current value and resets it to zero atomically. 
 
+\begin{DoxyReturn}{Returns}
+std\+::string The value (converted to string) before reset. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classVkInfo_1_1IMetric_a2068e51e1eddfd39df8e2a7cdd4fbcc9}{Vk\+Info\+::\+IMetric}}.
+
+\mbox{\Hypertarget{classVkInfo_1_1AtomicMetric_abad98195d5732557f8120035519e19b7}\label{classVkInfo_1_1AtomicMetric_abad98195d5732557f8120035519e19b7}} 
+\index{VkInfo::AtomicMetric$<$ T $>$@{VkInfo::AtomicMetric$<$ T $>$}!set@{set}}
+\index{set@{set}!VkInfo::AtomicMetric$<$ T $>$@{VkInfo::AtomicMetric$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classVkInfo_1_1AtomicMetric}{Vk\+Info\+::\+Atomic\+Metric}}$<$ T $>$\+::set (\begin{DoxyParamCaption}\item[{T}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the metric to a specific value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The new value to assign to the metric. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::domain\+\_\+error} & if value is out of \mbox{[}min\+\_\+, max\+\_\+\mbox{]} bounds. \\
+\hline
+\end{DoxyExceptions}
 \mbox{\Hypertarget{classVkInfo_1_1AtomicMetric_a61b2df3c0774404fb9354887e37584ad}\label{classVkInfo_1_1AtomicMetric_a61b2df3c0774404fb9354887e37584ad}} 
 \index{VkInfo::AtomicMetric$<$ T $>$@{VkInfo::AtomicMetric$<$ T $>$}!set\_random\_value@{set\_random\_value}}
 \index{set\_random\_value@{set\_random\_value}!VkInfo::AtomicMetric$<$ T $>$@{VkInfo::AtomicMetric$<$ T $>$}}
@@ -67,7 +148,11 @@ void \mbox{\hyperlink{classVkInfo_1_1AtomicMetric}{Vk\+Info\+::\+Atomic\+Metric}
 
 
 
-Implements \mbox{\hyperlink{classVkInfo_1_1IMetric}{Vk\+Info\+::\+IMetric}}.
+Sets the metric to a randomly generated value within its valid range. 
+
+This function is thread-\/safe and uses a thread-\/local random number generator. 
+
+Implements \mbox{\hyperlink{classVkInfo_1_1IMetric_ab7e689de01b1de582f87a08da218caf8}{Vk\+Info\+::\+IMetric}}.
 
 
 

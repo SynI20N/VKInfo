@@ -1,21 +1,92 @@
 \hypertarget{classVkInfo_1_1MetricsLogger}{}\doxysection{Vk\+Info\+::Metrics\+Logger Class Reference}
 \label{classVkInfo_1_1MetricsLogger}\index{VkInfo::MetricsLogger@{VkInfo::MetricsLogger}}
+
+
+Periodically logs metric values to a file.  
+
+
+
+
+{\ttfamily \#include $<$metrics\+\_\+logger.\+h$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classVkInfo_1_1MetricsLogger_a9dd1e0094cf86b2457b6d7780dfd9594}\label{classVkInfo_1_1MetricsLogger_a9dd1e0094cf86b2457b6d7780dfd9594}} 
-{\bfseries Metrics\+Logger} (\mbox{\hyperlink{classVkInfo_1_1MetricsRegistry}{Metrics\+Registry}} \&registry, const std\+::string \&filename, std\+::chrono\+::milliseconds interval)
-\item 
-\mbox{\Hypertarget{classVkInfo_1_1MetricsLogger_a68b364cce16ba7fdff9fa5838b463be0}\label{classVkInfo_1_1MetricsLogger_a68b364cce16ba7fdff9fa5838b463be0}} 
-void {\bfseries start} ()
-\item 
+\mbox{\hyperlink{classVkInfo_1_1MetricsLogger_a9dd1e0094cf86b2457b6d7780dfd9594}{Metrics\+Logger}} (\mbox{\hyperlink{classVkInfo_1_1MetricsRegistry}{Metrics\+Registry}} \&registry, const std\+::string \&filename, std\+::chrono\+::milliseconds interval)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classVkInfo_1_1MetricsLogger}{Metrics\+Logger}} instance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVkInfo_1_1MetricsLogger_af642edaf99ccaa5a1b399b8f5a62acb1}{$\sim$\+Metrics\+Logger}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classVkInfo_1_1MetricsLogger}{Metrics\+Logger}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVkInfo_1_1MetricsLogger_a68b364cce16ba7fdff9fa5838b463be0}{start}} ()
+\begin{DoxyCompactList}\small\item\em Starts the background logging thread. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classVkInfo_1_1MetricsLogger_a5450a99fc3b825bc5c352d165e5163cb}\label{classVkInfo_1_1MetricsLogger_a5450a99fc3b825bc5c352d165e5163cb}} 
 void {\bfseries stop} ()
-\item 
-\mbox{\Hypertarget{classVkInfo_1_1MetricsLogger_a834a943fb5762b51b30a378d7c5aa7f8}\label{classVkInfo_1_1MetricsLogger_a834a943fb5762b51b30a378d7c5aa7f8}} 
-std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classVkInfo_1_1IMetric}{IMetric}} $>$ $>$ {\bfseries get\+\_\+all\+\_\+metrics} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Stops the background logging thread safely. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classVkInfo_1_1IMetric}{IMetric}} $>$ $>$ \mbox{\hyperlink{classVkInfo_1_1MetricsLogger_a834a943fb5762b51b30a378d7c5aa7f8}{get\+\_\+all\+\_\+metrics}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves all currently registered metrics from the registry. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Periodically logs metric values to a file. 
+
+\mbox{\hyperlink{classVkInfo_1_1MetricsLogger}{Metrics\+Logger}} runs in a background thread, collecting metric values from a \mbox{\hyperlink{classVkInfo_1_1MetricsRegistry}{Metrics\+Registry}} at fixed intervals and writing them to a log file with timestamps. After logging, each metric is reset. This logger is thread-\/safe and non-\/blocking for metric producers. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classVkInfo_1_1MetricsLogger_a9dd1e0094cf86b2457b6d7780dfd9594}\label{classVkInfo_1_1MetricsLogger_a9dd1e0094cf86b2457b6d7780dfd9594}} 
+\index{VkInfo::MetricsLogger@{VkInfo::MetricsLogger}!MetricsLogger@{MetricsLogger}}
+\index{MetricsLogger@{MetricsLogger}!VkInfo::MetricsLogger@{VkInfo::MetricsLogger}}
+\doxysubsubsection{\texorpdfstring{MetricsLogger()}{MetricsLogger()}}
+{\footnotesize\ttfamily Vk\+Info\+::\+Metrics\+Logger\+::\+Metrics\+Logger (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVkInfo_1_1MetricsRegistry}{Metrics\+Registry}} \&}]{registry,  }\item[{const std\+::string \&}]{filename,  }\item[{std\+::chrono\+::milliseconds}]{interval }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classVkInfo_1_1MetricsLogger}{Metrics\+Logger}} instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em registry} & Reference to the \mbox{\hyperlink{classVkInfo_1_1MetricsRegistry}{Metrics\+Registry}} containing all metrics to log. \\
+\hline
+{\em filename} & Name of the file to write log entries to. \\
+\hline
+{\em interval} & Logging interval (e.\+g., every second). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVkInfo_1_1MetricsLogger_af642edaf99ccaa5a1b399b8f5a62acb1}\label{classVkInfo_1_1MetricsLogger_af642edaf99ccaa5a1b399b8f5a62acb1}} 
+\index{VkInfo::MetricsLogger@{VkInfo::MetricsLogger}!````~MetricsLogger@{$\sim$MetricsLogger}}
+\index{````~MetricsLogger@{$\sim$MetricsLogger}!VkInfo::MetricsLogger@{VkInfo::MetricsLogger}}
+\doxysubsubsection{\texorpdfstring{$\sim$MetricsLogger()}{~MetricsLogger()}}
+{\footnotesize\ttfamily Vk\+Info\+::\+Metrics\+Logger\+::$\sim$\+Metrics\+Logger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for \mbox{\hyperlink{classVkInfo_1_1MetricsLogger}{Metrics\+Logger}}. 
+
+Ensures the background thread is stopped before destruction. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classVkInfo_1_1MetricsLogger_a834a943fb5762b51b30a378d7c5aa7f8}\label{classVkInfo_1_1MetricsLogger_a834a943fb5762b51b30a378d7c5aa7f8}} 
+\index{VkInfo::MetricsLogger@{VkInfo::MetricsLogger}!get\_all\_metrics@{get\_all\_metrics}}
+\index{get\_all\_metrics@{get\_all\_metrics}!VkInfo::MetricsLogger@{VkInfo::MetricsLogger}}
+\doxysubsubsection{\texorpdfstring{get\_all\_metrics()}{get\_all\_metrics()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classVkInfo_1_1IMetric}{IMetric}} $>$ $>$ Vk\+Info\+::\+Metrics\+Logger\+::get\+\_\+all\+\_\+metrics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves all currently registered metrics from the registry. 
+
+\begin{DoxyReturn}{Returns}
+A vector of shared pointers to \mbox{\hyperlink{classVkInfo_1_1IMetric}{IMetric}} instances. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVkInfo_1_1MetricsLogger_a68b364cce16ba7fdff9fa5838b463be0}\label{classVkInfo_1_1MetricsLogger_a68b364cce16ba7fdff9fa5838b463be0}} 
+\index{VkInfo::MetricsLogger@{VkInfo::MetricsLogger}!start@{start}}
+\index{start@{start}!VkInfo::MetricsLogger@{VkInfo::MetricsLogger}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void Vk\+Info\+::\+Metrics\+Logger\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts the background logging thread. 
+
+Logs metric data to the file at the specified interval. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

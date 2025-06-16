@@ -72,16 +72,73 @@ $(function() {
   <div class="headertitle"><div class="title">VkInfo::MetricsRegistry Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Registry for managing and storing metrics.  
+ <a href="../../d7/dfd/classVkInfo_1_1MetricsRegistry.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d0/d02/metrics__registry_8h_source.html">metrics_registry.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4c536fab26935977f672b37497517b73"><td class="memItemLeft" align="right" valign="top"><a id="a4c536fab26935977f672b37497517b73" name="a4c536fab26935977f672b37497517b73"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>register_metric</b> (std::shared_ptr&lt; <a class="el" href="../../df/d52/classVkInfo_1_1IMetric.html">IMetric</a> &gt; metric)</td></tr>
+<tr class="memitem:a4c536fab26935977f672b37497517b73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dfd/classVkInfo_1_1MetricsRegistry.html#a4c536fab26935977f672b37497517b73">register_metric</a> (std::shared_ptr&lt; <a class="el" href="../../df/d52/classVkInfo_1_1IMetric.html">IMetric</a> &gt; metric)</td></tr>
+<tr class="memdesc:a4c536fab26935977f672b37497517b73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a new metric.  <a href="../../d7/dfd/classVkInfo_1_1MetricsRegistry.html#a4c536fab26935977f672b37497517b73">More...</a><br /></td></tr>
 <tr class="separator:a4c536fab26935977f672b37497517b73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc3589cee6a61d378718f763af48fb1e"><td class="memItemLeft" align="right" valign="top"><a id="afc3589cee6a61d378718f763af48fb1e" name="afc3589cee6a61d378718f763af48fb1e"></a>
-std::vector&lt; std::shared_ptr&lt; <a class="el" href="../../df/d52/classVkInfo_1_1IMetric.html">IMetric</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>get_all_metrics</b> ()</td></tr>
+<tr class="memitem:afc3589cee6a61d378718f763af48fb1e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::shared_ptr&lt; <a class="el" href="../../df/d52/classVkInfo_1_1IMetric.html">IMetric</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dfd/classVkInfo_1_1MetricsRegistry.html#afc3589cee6a61d378718f763af48fb1e">get_all_metrics</a> ()</td></tr>
+<tr class="memdesc:afc3589cee6a61d378718f763af48fb1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves all registered metrics.  <a href="../../d7/dfd/classVkInfo_1_1MetricsRegistry.html#afc3589cee6a61d378718f763af48fb1e">More...</a><br /></td></tr>
 <tr class="separator:afc3589cee6a61d378718f763af48fb1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Registry for managing and storing metrics. </p>
+<p ><a class="el" href="../../d7/dfd/classVkInfo_1_1MetricsRegistry.html" title="Registry for managing and storing metrics.">MetricsRegistry</a> maintains a thread-safe collection of metrics. It allows registration of new metrics and provides access to all registered metrics. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="afc3589cee6a61d378718f763af48fb1e" name="afc3589cee6a61d378718f763af48fb1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc3589cee6a61d378718f763af48fb1e">&#9670;&nbsp;</a></span>get_all_metrics()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::shared_ptr&lt; <a class="el" href="../../df/d52/classVkInfo_1_1IMetric.html">IMetric</a> &gt; &gt; VkInfo::MetricsRegistry::get_all_metrics </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves all registered metrics. </p>
+<p >Thread-safe method to get a snapshot of all metrics currently registered.</p>
+<dl class="section return"><dt>Returns</dt><dd>Vector of shared pointers to all registered metrics. </dd></dl>
+
+</div>
+</div>
+<a id="a4c536fab26935977f672b37497517b73" name="a4c536fab26935977f672b37497517b73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c536fab26935977f672b37497517b73">&#9670;&nbsp;</a></span>register_metric()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VkInfo::MetricsRegistry::register_metric </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="../../df/d52/classVkInfo_1_1IMetric.html">IMetric</a> &gt;&#160;</td>
+          <td class="paramname"><em>metric</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Registers a new metric. </p>
+<p >Thread-safe method to add a metric to the registry.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">metric</td><td>Shared pointer to the metric to register. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/leonid/Projects/VKInfo/VKInfoLib/include/<a class="el" href="../../d0/d02/metrics__registry_8h_source.html">metrics_registry.h</a></li>
 <li>/home/leonid/Projects/VKInfo/VKInfoLib/src/metrics_registry.cc</li>

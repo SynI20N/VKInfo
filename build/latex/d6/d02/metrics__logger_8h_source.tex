@@ -13,28 +13,32 @@
 \DoxyCodeLine{9 }
 \DoxyCodeLine{10 \textcolor{keyword}{namespace }VkInfo \{}
 \DoxyCodeLine{11 }
-\DoxyCodeLine{12 \textcolor{keyword}{class }VKINFO\_API \mbox{\hyperlink{classVkInfo_1_1MetricsLogger}{MetricsLogger}} \{}
-\DoxyCodeLine{13 \textcolor{keyword}{public}:}
-\DoxyCodeLine{14     \mbox{\hyperlink{classVkInfo_1_1MetricsLogger}{MetricsLogger}}(\mbox{\hyperlink{classVkInfo_1_1MetricsRegistry}{MetricsRegistry}}\& registry, \textcolor{keyword}{const} std::string\& filename, std::chrono::milliseconds interval);}
-\DoxyCodeLine{15     \mbox{\hyperlink{classVkInfo_1_1MetricsLogger}{\string~MetricsLogger}}();}
-\DoxyCodeLine{16 }
-\DoxyCodeLine{17     \textcolor{keywordtype}{void} start();}
-\DoxyCodeLine{18     \textcolor{keywordtype}{void} stop();}
-\DoxyCodeLine{19     std::vector<std::shared\_ptr<IMetric>> get\_all\_metrics();}
-\DoxyCodeLine{20 }
-\DoxyCodeLine{21 \textcolor{keyword}{private}:}
-\DoxyCodeLine{22     \mbox{\hyperlink{classVkInfo_1_1MetricsRegistry}{MetricsRegistry}}\& registry\_;}
-\DoxyCodeLine{23     std::string filename\_;}
-\DoxyCodeLine{24     std::chrono::milliseconds interval\_;}
-\DoxyCodeLine{25     std::atomic<bool> running\_;}
-\DoxyCodeLine{26     std::thread worker\_;}
-\DoxyCodeLine{27 }
-\DoxyCodeLine{28     \textcolor{keywordtype}{void} run();}
-\DoxyCodeLine{29     std::string get\_current\_timestamp() \textcolor{keyword}{const};}
-\DoxyCodeLine{30 \};}
-\DoxyCodeLine{31 }
-\DoxyCodeLine{32 \} \textcolor{comment}{// namespace VkInfo}}
-\DoxyCodeLine{33 }
-\DoxyCodeLine{34 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// METRICS\_LOGGER\_H\_}}
+\DoxyCodeLine{19 \textcolor{keyword}{class }VKINFO\_API \mbox{\hyperlink{classVkInfo_1_1MetricsLogger}{MetricsLogger}} \{}
+\DoxyCodeLine{20 \textcolor{keyword}{public}:}
+\DoxyCodeLine{28     \mbox{\hyperlink{classVkInfo_1_1MetricsLogger}{MetricsLogger}}(\mbox{\hyperlink{classVkInfo_1_1MetricsRegistry}{MetricsRegistry}}\& registry, \textcolor{keyword}{const} std::string\& filename, std::chrono::milliseconds interval);}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{35     \mbox{\hyperlink{classVkInfo_1_1MetricsLogger}{\string~MetricsLogger}}();}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} start();}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{47     \textcolor{keywordtype}{void} stop();}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{54     std::vector<std::shared\_ptr<IMetric>> get\_all\_metrics();}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 \textcolor{keyword}{private}:}
+\DoxyCodeLine{57     \mbox{\hyperlink{classVkInfo_1_1MetricsRegistry}{MetricsRegistry}}\& registry\_;                 }
+\DoxyCodeLine{58     std::string filename\_;                      }
+\DoxyCodeLine{59     std::chrono::milliseconds interval\_;        }
+\DoxyCodeLine{60     std::atomic<bool> running\_;                 }
+\DoxyCodeLine{61     std::thread worker\_;                        }
+\DoxyCodeLine{62 }
+\DoxyCodeLine{68     \textcolor{keywordtype}{void} run();}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{75     std::string get\_current\_timestamp() \textcolor{keyword}{const};}
+\DoxyCodeLine{76 \};}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78 \} \textcolor{comment}{// namespace VkInfo}}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// METRICS\_LOGGER\_H\_}}
 
 \end{DoxyCode}

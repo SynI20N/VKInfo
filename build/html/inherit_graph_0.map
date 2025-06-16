@@ -1,4 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$df/d52/classVkInfo_1_1IMetric.html" title=" " alt="" coords="5,5,113,32"/>
-<area shape="rect" id="node2" href="$d1/db0/classVkInfo_1_1AtomicMetric.html" title=" " alt="" coords="161,5,339,32"/>
+<area shape="rect" id="node1" href="$df/d52/classVkInfo_1_1IMetric.html" title="Interface for all metric types." alt="" coords="5,5,113,32"/>
+<area shape="rect" id="node2" href="$d1/db0/classVkInfo_1_1AtomicMetric.html" title="A thread&#45;safe metric implementation using atomic variables." alt="" coords="161,5,339,32"/>
 </map>
