@@ -12,6 +12,7 @@ public:
     virtual ~IMetric() = default;
     virtual std::string get_name() const = 0;
     virtual std::string get_value_and_reset() = 0;
+    virtual void set_random_value() = 0;
 };
 
 } // namespace VkInfo

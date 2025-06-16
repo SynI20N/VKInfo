@@ -23,22 +23,10 @@ int main(int argc, char** argv)
     registry.register_metric(vkStock);
     registry.register_metric(avgCpuLoad);
 
-    VkInfo::MetricsLogger logger(registry, "metrics.log", std::chrono::seconds(1));
-    logger.start();
-
-    // Имитируем работу приложения
-    for (int i = 0; i < 100; ++i) {
-        cpuUtil->set(1.5 * (i % 3));
-        httpReqs->set(10 + i);
-
-        std::this_thread::sleep_for(std::chrono::milliseconds(50));
-    }
-
-    logger.stop();
-
     QApplication a(argc, argv);
 
-    MainWidget w;
+    VkInfo::MetricsLogger* logger = new VkInfo::MetricsLogger(registry, "metrics.log", std::chrono::seconds(1));
+    MainWidget w(logger);
     w.show();
 
     return a.exec();

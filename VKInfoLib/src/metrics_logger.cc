@@ -34,6 +34,10 @@ void MetricsLogger::stop() {
     }
 }
 
+std::vector<std::shared_ptr<IMetric>> MetricsLogger::get_all_metrics() {
+    return registry_.get_all_metrics();
+}
+
 std::string MetricsLogger::get_current_timestamp() const {
     using namespace std::chrono;
 

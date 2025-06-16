@@ -8,49 +8,60 @@
 \DoxyCodeLine{4 \textcolor{preprocessor}{\#include <string>}}
 \DoxyCodeLine{5 \textcolor{preprocessor}{\#include <atomic>}}
 \DoxyCodeLine{6 \textcolor{preprocessor}{\#include <stdexcept>}}
-\DoxyCodeLine{7 }
-\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}metric.h"{}}}
-\DoxyCodeLine{9 }
-\DoxyCodeLine{10 \textcolor{keyword}{namespace }VkInfo \{}
-\DoxyCodeLine{11 }
-\DoxyCodeLine{12 \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
-\DoxyCodeLine{13 \textcolor{keyword}{class }VKINFO\_API \mbox{\hyperlink{classVkInfo_1_1AtomicMetric}{AtomicMetric}} : \textcolor{keyword}{public} \mbox{\hyperlink{classVkInfo_1_1IMetric}{IMetric}} \{}
-\DoxyCodeLine{14 \textcolor{keyword}{public}:}
-\DoxyCodeLine{15     \mbox{\hyperlink{classVkInfo_1_1AtomicMetric}{AtomicMetric}}(\textcolor{keyword}{const} std::string\& name, T max, T min) }
-\DoxyCodeLine{16         : name\_(name), value\_(0), max\_(max), min\_(min) \{\}}
-\DoxyCodeLine{17 }
-\DoxyCodeLine{18     \textcolor{keywordtype}{void} set(T value)  \{}
-\DoxyCodeLine{19         validate(value);}
-\DoxyCodeLine{20         value\_ = value;}
-\DoxyCodeLine{21     \}}
-\DoxyCodeLine{22 }
-\DoxyCodeLine{23     std::string get\_name()\textcolor{keyword}{ const override }\{}
-\DoxyCodeLine{24         \textcolor{keywordflow}{return} name\_;}
-\DoxyCodeLine{25     \}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <random>}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}metric.h"{}}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{namespace }VkInfo \{}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{14 \textcolor{keyword}{class }VKINFO\_API \mbox{\hyperlink{classVkInfo_1_1AtomicMetric}{AtomicMetric}} : \textcolor{keyword}{public} \mbox{\hyperlink{classVkInfo_1_1IMetric}{IMetric}} \{}
+\DoxyCodeLine{15 \textcolor{keyword}{public}:}
+\DoxyCodeLine{16     \mbox{\hyperlink{classVkInfo_1_1AtomicMetric}{AtomicMetric}}(\textcolor{keyword}{const} std::string\& name, T max, T min) }
+\DoxyCodeLine{17         : name\_(name), value\_(0), max\_(max), min\_(min) \{\}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     \textcolor{keywordtype}{void} set(T value)  \{}
+\DoxyCodeLine{20         validate(value);}
+\DoxyCodeLine{21         value\_ = value;}
+\DoxyCodeLine{22     \}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     \textcolor{keywordtype}{void} set\_random\_value()\textcolor{keyword}{ override }\{}
+\DoxyCodeLine{25         \textcolor{keyword}{using }dist = std::uniform\_real\_distribution<double>;}
 \DoxyCodeLine{26 }
-\DoxyCodeLine{27     std::string get\_value\_and\_reset()\textcolor{keyword}{ override }\{}
-\DoxyCodeLine{28         T val = value\_.exchange(0);}
-\DoxyCodeLine{29         \textcolor{keywordflow}{return} std::to\_string(val);}
-\DoxyCodeLine{30     \}}
-\DoxyCodeLine{31 }
-\DoxyCodeLine{32 \textcolor{keyword}{private}:}
-\DoxyCodeLine{33     std::string name\_;}
-\DoxyCodeLine{34     std::atomic<T> value\_;}
-\DoxyCodeLine{35     T max\_;}
-\DoxyCodeLine{36     T min\_;}
+\DoxyCodeLine{27         \textcolor{keyword}{static} \textcolor{keyword}{thread\_local} std::mt19937 gen(std::random\_device\{\}());}
+\DoxyCodeLine{28         dist real\_dist;}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30         real\_dist = dist(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(min\_), \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(max\_));}
+\DoxyCodeLine{31         value\_ = \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(real\_dist(gen));}
+\DoxyCodeLine{32     \}}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34     std::string get\_name()\textcolor{keyword}{ const override }\{}
+\DoxyCodeLine{35         \textcolor{keywordflow}{return} name\_;}
+\DoxyCodeLine{36     \}}
 \DoxyCodeLine{37 }
-\DoxyCodeLine{38     \textcolor{keywordtype}{void} validate(T\& value) \{}
-\DoxyCodeLine{39         \textcolor{keywordflow}{if}(value > max\_) \{}
-\DoxyCodeLine{40             \textcolor{keywordflow}{throw} std::domain\_error(\textcolor{stringliteral}{"{}metric value exceeds max value"{}});}
-\DoxyCodeLine{41         \}}
-\DoxyCodeLine{42         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(value < min\_) \{}
-\DoxyCodeLine{43             \textcolor{keywordflow}{throw} std::domain\_error(\textcolor{stringliteral}{"{}metric value underflows"{}});}
-\DoxyCodeLine{44         \}}
-\DoxyCodeLine{45     \}}
-\DoxyCodeLine{46 \};}
-\DoxyCodeLine{47 }
-\DoxyCodeLine{48 \} \textcolor{comment}{// namespace VkInfo}}
-\DoxyCodeLine{49 }
-\DoxyCodeLine{50 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// ATOMIC\_METRIC\_H\_}}
+\DoxyCodeLine{38     std::string get\_value\_and\_reset()\textcolor{keyword}{ override }\{}
+\DoxyCodeLine{39         T val = value\_.exchange(0);}
+\DoxyCodeLine{40         \textcolor{keywordflow}{return} std::to\_string(val);}
+\DoxyCodeLine{41     \}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{keyword}{private}:}
+\DoxyCodeLine{44     std::string name\_;}
+\DoxyCodeLine{45     std::atomic<T> value\_;}
+\DoxyCodeLine{46     T max\_;}
+\DoxyCodeLine{47     T min\_;}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49     \textcolor{keywordtype}{void} validate(T\& value) \{}
+\DoxyCodeLine{50         \textcolor{keywordflow}{if}(value > max\_) \{}
+\DoxyCodeLine{51             \textcolor{keywordflow}{throw} std::domain\_error(\textcolor{stringliteral}{"{}metric value exceeds max value"{}});}
+\DoxyCodeLine{52         \}}
+\DoxyCodeLine{53         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(value < min\_) \{}
+\DoxyCodeLine{54             \textcolor{keywordflow}{throw} std::domain\_error(\textcolor{stringliteral}{"{}metric value underflows"{}});}
+\DoxyCodeLine{55         \}}
+\DoxyCodeLine{56     \}}
+\DoxyCodeLine{57 \};}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 \} \textcolor{comment}{// namespace VkInfo}}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// ATOMIC\_METRIC\_H\_}}
 
 \end{DoxyCode}

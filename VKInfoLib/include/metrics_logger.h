@@ -16,6 +16,7 @@ public:
 
     void start();
     void stop();
+    std::vector<std::shared_ptr<IMetric>> get_all_metrics();
 
 private:
     MetricsRegistry& registry_;

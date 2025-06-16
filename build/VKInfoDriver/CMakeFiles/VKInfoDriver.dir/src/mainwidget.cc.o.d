@@ -905,4 +905,10 @@ VKInfoDriver/CMakeFiles/VKInfoDriver.dir/src/mainwidget.cc.o: \
  /usr/include/c++/12/bits/ostream.tcc /usr/include/c++/12/istream \
  /usr/include/c++/12/bits/istream.tcc \
  /home/leonid/Projects/VKInfo/VKInfoDriver/src/../include/mainwidget.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget
+ /home/leonid/Projects/VKInfo/VKInfoDriver/src/../include/../../VKInfoLib/include/metrics_logger.h \
+ /usr/include/c++/12/thread /usr/include/c++/12/bits/this_thread_sleep.h \
+ /home/leonid/Projects/VKInfo/VKInfoDriver/src/../include/../../VKInfoLib/include/metrics_registry.h \
+ /home/leonid/Projects/VKInfo/VKInfoDriver/src/../include/../../VKInfoLib/include/metric.h \
+ /home/leonid/Projects/VKInfo/VKInfoDriver/src/../include/../../VKInfoLib/include/export.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout

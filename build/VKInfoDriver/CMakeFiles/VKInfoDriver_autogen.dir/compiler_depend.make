@@ -5,6 +5,10 @@ VKInfoDriver/VKInfoDriver_autogen/timestamp: /home/leonid/Projects/VKInfo/VKInfo
   /home/leonid/Projects/VKInfo/VKInfoDriver/include/mainwidget.h \
   /home/leonid/Projects/VKInfo/VKInfoDriver/src/main.cc \
   /home/leonid/Projects/VKInfo/VKInfoDriver/src/mainwidget.cc \
+  /home/leonid/Projects/VKInfo/VKInfoLib/include/export.h \
+  /home/leonid/Projects/VKInfo/VKInfoLib/include/metric.h \
+  /home/leonid/Projects/VKInfo/VKInfoLib/include/metrics_logger.h \
+  /home/leonid/Projects/VKInfo/VKInfoLib/include/metrics_registry.h \
   VKInfoDriver/VKInfoDriver_autogen/moc_predefs.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -138,6 +142,7 @@ VKInfoDriver/VKInfoDriver_autogen/timestamp: /home/leonid/Projects/VKInfo/VKInfo
   /usr/include/c++/12/list \
   /usr/include/c++/12/map \
   /usr/include/c++/12/memory \
+  /usr/include/c++/12/mutex \
   /usr/include/c++/12/new \
   /usr/include/c++/12/numbers \
   /usr/include/c++/12/numeric \
@@ -151,6 +156,7 @@ VKInfoDriver/VKInfoDriver_autogen/timestamp: /home/leonid/Projects/VKInfo/VKInfo
   /usr/include/c++/12/streambuf \
   /usr/include/c++/12/string \
   /usr/include/c++/12/string_view \
+  /usr/include/c++/12/thread \
   /usr/include/c++/12/tuple \
   /usr/include/c++/12/type_traits \
   /usr/include/c++/12/typeinfo \
@@ -318,7 +324,12 @@ VKInfoDriver/VKInfoDriver_autogen/timestamp: /home/leonid/Projects/VKInfo/VKInfo
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtguiglobal.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtransform.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qboxlayout.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgridlayout.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayout.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayoutitem.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
@@ -426,6 +437,14 @@ VKInfoDriver/VKInfoDriver_autogen/timestamp: /home/leonid/Projects/VKInfo/VKInfo
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h:
 
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayoutitem.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgridlayout.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qboxlayout.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout:
+
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qtransform.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qtguiglobal.h:
@@ -507,6 +526,14 @@ VKInfoDriver/VKInfoDriver_autogen/timestamp: /home/leonid/Projects/VKInfo/VKInfo
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qiodevice.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qhash.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qgenericatomic.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainertools_impl.h:
 
 /usr/include/c++/12/cwctype:
 
@@ -610,8 +637,6 @@ VKInfoDriver/VKInfoDriver_autogen/moc_predefs.h:
 
 /usr/include/c++/12/bits/shared_ptr_atomic.h:
 
-/usr/include/c++/12/ext/concurrence.h:
-
 /usr/include/c++/12/bits/shared_ptr.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qline.h:
@@ -628,51 +653,29 @@ VKInfoDriver/VKInfoDriver_autogen/moc_predefs.h:
 
 /usr/include/c++/12/streambuf:
 
-/usr/include/c++/12/bits/ranges_algobase.h:
-
 /usr/include/c++/12/bits/ranges_algo.h:
 
 /usr/include/linux/errno.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
 
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayout.h:
+
 /usr/include/c++/12/bits/range_access.h:
 
-/usr/include/c++/12/bits/node_handle.h:
+/usr/include/c++/12/bits/ostream_insert.h:
 
-/usr/include/c++/12/ext/atomicity.h:
+/usr/include/x86_64-linux-gnu/bits/endian.h:
 
-/usr/include/c++/12/string:
+/usr/include/c++/12/vector:
 
-/usr/include/strings.h:
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
-/usr/include/c++/12/bits/uses_allocator_args.h:
+/usr/include/c++/12/bits/ostream.tcc:
 
-/usr/include/c++/12/bits/stl_map.h:
+/usr/include/c++/12/string_view:
 
-/usr/include/x86_64-linux-gnu/qt5/QtGui/qrgba64.h:
-
-/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
-
-/usr/include/c++/12/bits/atomic_wait.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
-
-/usr/include/c++/12/bits/basic_string.tcc:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake:
-
-/usr/include/features-time64.h:
-
-/usr/include/c++/12/ext/aligned_buffer.h:
-
-/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
-
-/usr/include/c++/12/bits/algorithmfwd.h:
-
-/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
-
-/usr/include/c++/12/bit:
+/usr/include/c++/12/bits/locale_facets.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h:
 
@@ -690,8 +693,6 @@ VKInfoDriver/VKInfoDriver_autogen/moc_predefs.h:
 
 /usr/include/c++/12/bits/allocator.h:
 
-/usr/include/c++/12/bits/cpp_type_traits.h:
-
 /usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake:
 
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
@@ -700,19 +701,25 @@ VKInfoDriver/VKInfoDriver_autogen/moc_predefs.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
+/usr/include/c++/12/bits/ranges_algobase.h:
+
+/usr/include/c++/12/bits/cxxabi_init_exception.h:
+
 /usr/include/c++/12/bits/list.tcc:
 
-/usr/include/c++/12/bits/ranges_cmp.h:
+/usr/include/c++/12/backward/auto_ptr.h:
 
-/usr/include/c++/12/bits/locale_facets.tcc:
+/usr/include/wctype.h:
 
-/usr/include/x86_64-linux-gnu/bits/sched.h:
+/usr/include/sched.h:
 
-/usr/include/c++/12/algorithm:
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
+/usr/include/c++/12/bits/alloc_traits.h:
 
-/usr/include/c++/12/bits/hash_bytes.h:
+/usr/include/c++/12/array:
+
+/home/leonid/Projects/VKInfo/VKInfoDriver/include/mainwidget.h:
 
 /usr/include/c++/12/bits/basic_string.h:
 
@@ -730,29 +737,55 @@ VKInfoDriver/VKInfoDriver_autogen/moc_predefs.h:
 
 /home/leonid/Projects/VKInfo/VKInfoDriver/src/main.cc:
 
-/home/leonid/Projects/VKInfo/VKInfoDriver/include/mainwidget.h:
-
-/usr/include/c++/12/array:
-
-/usr/include/c++/12/bits/vector.tcc:
-
-/usr/include/c++/12/ext/string_conversions.h:
-
-/usr/include/c++/12/backward/auto_ptr.h:
-
-/usr/include/wctype.h:
-
-/usr/include/sched.h:
-
 /usr/include/c++/12/bits/stl_heap.h:
 
 /usr/include/c++/12/bits/ranges_base.h:
 
-/usr/include/c++/12/bits/unique_ptr.h:
+/usr/include/c++/12/bits/hash_bytes.h:
 
-/usr/include/c++/12/iterator:
+/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake:
 
-/home/leonid/Projects/VKInfo/VKInfoDriver/src/mainwidget.cc:
+/usr/include/features-time64.h:
+
+/usr/include/c++/12/ext/aligned_buffer.h:
+
+/usr/include/c++/12/bits/ranges_cmp.h:
+
+/usr/include/c++/12/bits/locale_facets.tcc:
+
+/usr/include/x86_64-linux-gnu/bits/sched.h:
+
+/usr/include/c++/12/algorithm:
+
+/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
+
+/home/leonid/Projects/VKInfo/VKInfoLib/include/metric.h:
+
+/usr/include/c++/12/mutex:
+
+/usr/include/asm-generic/errno-base.h:
+
+/usr/include/c++/12/bits/uses_allocator_args.h:
+
+/usr/include/c++/12/bits/exception.h:
+
+/usr/include/c++/12/bits/locale_classes.tcc:
+
+/usr/include/x86_64-linux-gnu/asm/unistd_64.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/12/include/limits.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h:
+
+/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevMousePlugin.cmake:
+
+/usr/include/c++/12/initializer_list:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraylist.h:
 
 /usr/include/c++/12/bits/atomic_lockfree_defines.h:
 
@@ -766,13 +799,33 @@ VKInfoDriver/VKInfoDriver_autogen/moc_predefs.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h:
 
+/home/leonid/Projects/VKInfo/VKInfoLib/include/metrics_logger.h:
+
 /usr/include/c++/12/bits/ios_base.h:
 
+/usr/include/c++/12/bits/stl_map.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qrgba64.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+/usr/include/c++/12/bits/atomic_wait.h:
+
+/usr/include/c++/12/bits/unique_ptr.h:
+
+/home/leonid/Projects/VKInfo/VKInfoDriver/src/mainwidget.cc:
+
+/usr/include/c++/12/iterator:
+
+/usr/include/c++/12/bits/algorithmfwd.h:
+
+/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
+
+/usr/include/c++/12/bits/basic_string.tcc:
+
 /usr/include/c++/12/bits/char_traits.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h:
-
-/usr/include/c++/12/bits/alloc_traits.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qrect.h:
 
@@ -802,25 +855,15 @@ VKInfoDriver/VKInfoDriver_autogen/moc_predefs.h:
 
 /usr/include/c++/12/backward/binders.h:
 
-/usr/include/c++/12/bits/cxxabi_init_exception.h:
-
-/usr/include/c++/12/bits/exception.h:
-
-/usr/include/c++/12/bits/locale_classes.tcc:
-
-/usr/include/x86_64-linux-gnu/asm/unistd_64.h:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevMousePlugin.cmake:
-
-/usr/include/c++/12/initializer_list:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraylist.h:
-
 /usr/include/c++/12/bits/exception_ptr.h:
 
 /usr/include/c++/12/bits/stl_multimap.h:
 
 /usr/include/c++/12/bits/exception_defines.h:
+
+/usr/include/c++/12/bits/cpp_type_traits.h:
+
+/usr/include/c++/12/thread:
 
 /usr/include/c++/12/bits/locale_classes.h:
 
@@ -830,11 +873,11 @@ VKInfoDriver/VKInfoDriver_autogen/moc_predefs.h:
 
 /usr/include/c++/12/bits/stl_algobase.h:
 
-/usr/include/c++/12/string_view:
+/usr/include/c++/12/bits/stl_tree.h:
 
-/usr/include/c++/12/bits/locale_facets.h:
+/usr/include/c++/12/bits/stream_iterator.h:
 
-/usr/include/c++/12/bits/ostream.tcc:
+/usr/include/c++/12/ios:
 
 /usr/include/c++/12/bits/stringfwd.h:
 
@@ -844,9 +887,9 @@ VKInfoDriver/VKInfoDriver_autogen/moc_predefs.h:
 
 /usr/include/c++/12/bits/functional_hash.h:
 
-/usr/include/c++/12/bits/c++0x_warning.h:
-
 /usr/include/syscall.h:
+
+/usr/include/c++/12/bits/c++0x_warning.h:
 
 /usr/include/c++/12/bits/move_only_function.h:
 
@@ -860,29 +903,23 @@ VKInfoDriver/VKInfoDriver_autogen/moc_predefs.h:
 
 /usr/include/stdc-predef.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/12/include/limits.h:
+/usr/include/c++/12/bits/node_handle.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget:
+/usr/include/c++/12/ext/atomicity.h:
 
-/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
+/usr/include/c++/12/string:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h:
+/usr/include/strings.h:
 
-/usr/include/asm-generic/errno-base.h:
+/usr/include/c++/12/bit:
 
-/usr/include/c++/12/bits/stl_tree.h:
+/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
-/usr/include/c++/12/bits/stream_iterator.h:
+/usr/include/c++/12/ext/concurrence.h:
 
-/usr/include/c++/12/ios:
+/usr/include/c++/12/bits/vector.tcc:
 
-/usr/include/c++/12/bits/ostream_insert.h:
-
-/usr/include/x86_64-linux-gnu/bits/endian.h:
-
-/usr/include/c++/12/vector:
-
-/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+/usr/include/c++/12/ext/string_conversions.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
 
@@ -892,9 +929,9 @@ VKInfoDriver/VKInfoDriver_autogen/moc_predefs.h:
 
 /usr/include/c++/12/list:
 
-/usr/include/c++/12/bits/charconv.h:
-
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h:
+
+/usr/include/c++/12/bits/charconv.h:
 
 /usr/include/c++/12/map:
 
@@ -918,9 +955,9 @@ VKInfoDriver/VKInfoDriver_autogen/moc_predefs.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qpair.h:
 
-/usr/include/c++/12/bits/allocated_ptr.h:
-
 /usr/include/c++/12/bits/nested_exception.h:
+
+/usr/include/c++/12/bits/allocated_ptr.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_cxx11.h:
 
@@ -935,6 +972,8 @@ VKInfoDriver/VKInfoDriver_autogen/moc_predefs.h:
 /usr/include/c++/12/typeinfo:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h:
+
+/home/leonid/Projects/VKInfo/VKInfoLib/include/export.h:
 
 /usr/include/c++/12/unordered_map:
 
@@ -1038,8 +1077,6 @@ VKInfoDriver/VKInfoDriver_autogen/moc_predefs.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainertools_impl.h:
-
 /usr/include/c++/12/memory:
 
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
@@ -1088,6 +1125,8 @@ VKInfoDriver/VKInfoDriver_autogen/moc_predefs.h:
 
 /usr/include/x86_64-linux-gnu/c++/12/bits/os_defines.h:
 
+/home/leonid/Projects/VKInfo/VKInfoLib/include/metrics_registry.h:
+
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h:
@@ -1097,9 +1136,3 @@ VKInfoDriver/VKInfoDriver_autogen/moc_predefs.h:
 /usr/include/x86_64-linux-gnu/bits/time.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qgenericatomic.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h:

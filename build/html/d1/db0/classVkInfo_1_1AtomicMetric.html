@@ -99,6 +99,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abad98195d5732557f8120035519e19b7"><td class="memItemLeft" align="right" valign="top"><a id="abad98195d5732557f8120035519e19b7" name="abad98195d5732557f8120035519e19b7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (T value)</td></tr>
 <tr class="separator:abad98195d5732557f8120035519e19b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61b2df3c0774404fb9354887e37584ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classVkInfo_1_1AtomicMetric.html#a61b2df3c0774404fb9354887e37584ad">set_random_value</a> () override</td></tr>
+<tr class="separator:a61b2df3c0774404fb9354887e37584ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acacb7ad7f17f3b0d855a9f31a6d517f1"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classVkInfo_1_1AtomicMetric.html#acacb7ad7f17f3b0d855a9f31a6d517f1">get_name</a> () const override</td></tr>
 <tr class="separator:acacb7ad7f17f3b0d855a9f31a6d517f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ea8de63ea21c4d6a8e3c30838e381db"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classVkInfo_1_1AtomicMetric.html#a6ea8de63ea21c4d6a8e3c30838e381db">get_value_and_reset</a> () override</td></tr>
@@ -109,6 +111,9 @@ virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>get_na
 <tr class="memitem:a2068e51e1eddfd39df8e2a7cdd4fbcc9"><td class="memItemLeft" align="right" valign="top"><a id="a2068e51e1eddfd39df8e2a7cdd4fbcc9" name="a2068e51e1eddfd39df8e2a7cdd4fbcc9"></a>
 virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>get_value_and_reset</b> ()=0</td></tr>
 <tr class="separator:a2068e51e1eddfd39df8e2a7cdd4fbcc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7e689de01b1de582f87a08da218caf8"><td class="memItemLeft" align="right" valign="top"><a id="ab7e689de01b1de582f87a08da218caf8" name="ab7e689de01b1de582f87a08da218caf8"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>set_random_value</b> ()=0</td></tr>
+<tr class="separator:ab7e689de01b1de582f87a08da218caf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="acacb7ad7f17f3b0d855a9f31a6d517f1" name="acacb7ad7f17f3b0d855a9f31a6d517f1"></a>
@@ -153,6 +158,35 @@ template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">std::string <a class="el" href="../../d1/db0/classVkInfo_1_1AtomicMetric.html">VkInfo::AtomicMetric</a>&lt; T &gt;::get_value_and_reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="../../df/d52/classVkInfo_1_1IMetric.html">VkInfo::IMetric</a>.</p>
+
+</div>
+</div>
+<a id="a61b2df3c0774404fb9354887e37584ad" name="a61b2df3c0774404fb9354887e37584ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61b2df3c0774404fb9354887e37584ad">&#9670;&nbsp;</a></span>set_random_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d1/db0/classVkInfo_1_1AtomicMetric.html">VkInfo::AtomicMetric</a>&lt; T &gt;::set_random_value </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>

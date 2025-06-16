@@ -1,5 +1,9 @@
 /home/leonid/Projects/VKInfo/build/VKInfoDriver/VKInfoDriver_autogen/6YEA5652QU/moc_mainwidget.cpp: /home/leonid/Projects/VKInfo/VKInfoDriver/include/mainwidget.h \
   /home/leonid/Projects/VKInfo/build/VKInfoDriver/VKInfoDriver_autogen/moc_predefs.h \
+  /home/leonid/Projects/VKInfo/VKInfoLib/include/export.h \
+  /home/leonid/Projects/VKInfo/VKInfoLib/include/metric.h \
+  /home/leonid/Projects/VKInfo/VKInfoLib/include/metrics_logger.h \
+  /home/leonid/Projects/VKInfo/VKInfoLib/include/metrics_registry.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/assert.h \
@@ -132,6 +136,7 @@
   /usr/include/c++/12/list \
   /usr/include/c++/12/map \
   /usr/include/c++/12/memory \
+  /usr/include/c++/12/mutex \
   /usr/include/c++/12/new \
   /usr/include/c++/12/numbers \
   /usr/include/c++/12/numeric \
@@ -145,6 +150,7 @@
   /usr/include/c++/12/streambuf \
   /usr/include/c++/12/string \
   /usr/include/c++/12/string_view \
+  /usr/include/c++/12/thread \
   /usr/include/c++/12/tuple \
   /usr/include/c++/12/type_traits \
   /usr/include/c++/12/typeinfo \
@@ -312,7 +318,12 @@
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtguiglobal.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtransform.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qboxlayout.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgridlayout.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayout.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayoutitem.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \

@@ -1,34 +1,45 @@
 #include <QtWidgets>
 #include <iostream>
+#include <memory>
 
 #include "../include/mainwidget.h"
 
-void MainWidget::push_button_clicked() {
-   std::cout << "Pushed button1" << '\n';
+void MainWidget::create_metric_buttons(const std::vector<std::shared_ptr<VkInfo::IMetric>>& metrics,
+                                       QVBoxLayout* parentLayout) {
+    for (const auto& metric : metrics) {
+        QString buttonText = QString::fromStdString("Set random for: " + metric->get_name());
+        QPushButton* button = new QPushButton(buttonText);
+        parentLayout->addWidget(button);
+
+        connect(button, &QPushButton::clicked, [metric, this]() {
+            metric->set_random_value();
+            QString msg = QString("Random value set for \"%1\"").arg(QString::fromStdString(metric->get_name()));
+            textBrowser_->append(msg);
+        });
+    }
 }
 
-// Constructor for main widget
-MainWidget::MainWidget(QWidget *parent) :
-    QWidget(parent)
+MainWidget::MainWidget(VkInfo::MetricsLogger* logger, QWidget *parent)
+    : QWidget(parent)
 {
-   button_ = new QPushButton(tr("Generate HTTP metric"));
-   button2_ = new QPushButton(tr("Generate CPU metric"));
-   textBrowser_ = new QTextBrowser();
+    logger_ = std::unique_ptr<VkInfo::MetricsLogger>(logger);
+    logger_->start();
 
-   QGridLayout *mainLayout = new QGridLayout;
-   mainLayout->addWidget(button_,0,0);
-   mainLayout->addWidget(button2_,1,0);
-   mainLayout->addWidget(textBrowser_,2,0);
-   setLayout(mainLayout);
-   setWindowTitle(tr("VKInfoDriver"));
-   connect( button_, SIGNAL( clicked() ), this, SLOT(push_button_clicked()));
+    QVBoxLayout* mainLayout = new QVBoxLayout;
+
+    textBrowser_ = new QTextBrowser();
+    mainLayout->addWidget(textBrowser_);
+
+    metrics_ = logger_->get_all_metrics();
+
+    create_metric_buttons(metrics_, mainLayout);
+
+    setLayout(mainLayout);
+    setWindowTitle(tr("VKInfo Metrics"));
 }
 
-// Destructor
 MainWidget::~MainWidget()
 {
-   delete button_;
-   delete button2_;
    delete textBrowser_;
 }
 

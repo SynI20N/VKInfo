@@ -4,6 +4,7 @@
 #include <string>
 #include <atomic>
 #include <stdexcept>
+#include <random>
 
 #include "metric.h"
 
@@ -18,6 +19,16 @@ public:
     void set(T value)  {
         validate(value);
         value_ = value;
+    }
+
+    void set_random_value() override {
+        using dist = std::uniform_real_distribution<double>;
+
+        static thread_local std::mt19937 gen(std::random_device{}());
+        dist real_dist;
+
+        real_dist = dist(static_cast<double>(min_), static_cast<double>(max_));
+        value_ = static_cast<T>(real_dist(gen));
     }
 
     std::string get_name() const override {
