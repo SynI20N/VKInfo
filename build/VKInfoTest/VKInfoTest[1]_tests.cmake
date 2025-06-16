@@ -1,0 +1,1 @@
+set(  VKInfoTest_TESTS)

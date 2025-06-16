@@ -1,0 +1,30 @@
+\hypertarget{metrics__registry_8h_source}{}\doxysection{metrics\+\_\+registry.\+h}
+\label{metrics__registry_8h_source}\index{/home/leonid/Projects/VKInfo/VKInfoLib/include/metrics\_registry.h@{/home/leonid/Projects/VKInfo/VKInfoLib/include/metrics\_registry.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef METRICS\_REGISTRY\_H\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define METRICS\_REGISTRY\_H\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <mutex>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}metric.h"{}}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{namespace }VkInfo \{}
+\DoxyCodeLine{11     }
+\DoxyCodeLine{12 \textcolor{keyword}{class }VKINFO\_API \mbox{\hyperlink{classVkInfo_1_1MetricsRegistry}{MetricsRegistry}} \{}
+\DoxyCodeLine{13 \textcolor{keyword}{public}:}
+\DoxyCodeLine{14     \textcolor{keywordtype}{void} register\_metric(std::shared\_ptr<IMetric> metric);}
+\DoxyCodeLine{15     std::vector<std::shared\_ptr<IMetric>> get\_all\_metrics();}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{private}:}
+\DoxyCodeLine{18     std::vector<std::shared\_ptr<IMetric>> metrics\_;}
+\DoxyCodeLine{19     std::mutex mutex\_;}
+\DoxyCodeLine{20 \};}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \} \textcolor{comment}{// namespace VkInfo}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// METRICS\_REGISTRY\_H\_}}
+
+\end{DoxyCode}

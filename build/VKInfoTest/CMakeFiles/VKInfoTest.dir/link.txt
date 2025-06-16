@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/VKInfoTest.dir/src/test.cpp.o -o VKInfoTest  -Wl,-rpath,/home/leonid/Projects/VKInfo/build/VKInfoLib:/home/leonid/Projects/VKInfo/build/lib ../VKInfoLib/libVKInfoLib.so ../lib/libgtest_main.so.1.12.1 ../lib/libgtest.so.1.12.1

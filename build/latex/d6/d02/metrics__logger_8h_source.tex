@@ -1,0 +1,39 @@
+\hypertarget{metrics__logger_8h_source}{}\doxysection{metrics\+\_\+logger.\+h}
+\label{metrics__logger_8h_source}\index{/home/leonid/Projects/VKInfo/VKInfoLib/include/metrics\_logger.h@{/home/leonid/Projects/VKInfo/VKInfoLib/include/metrics\_logger.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef METRICS\_LOGGER\_H\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define METRICS\_LOGGER\_H\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <atomic>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <thread>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}metrics\_registry.h"{}}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{namespace }VkInfo \{}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{class }VKINFO\_API \mbox{\hyperlink{classVkInfo_1_1MetricsLogger}{MetricsLogger}} \{}
+\DoxyCodeLine{13 \textcolor{keyword}{public}:}
+\DoxyCodeLine{14     \mbox{\hyperlink{classVkInfo_1_1MetricsLogger}{MetricsLogger}}(\mbox{\hyperlink{classVkInfo_1_1MetricsRegistry}{MetricsRegistry}}\& registry, \textcolor{keyword}{const} std::string\& filename, std::chrono::milliseconds interval);}
+\DoxyCodeLine{15     \mbox{\hyperlink{classVkInfo_1_1MetricsLogger}{\string~MetricsLogger}}();}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17     \textcolor{keywordtype}{void} start();}
+\DoxyCodeLine{18     \textcolor{keywordtype}{void} stop();}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{private}:}
+\DoxyCodeLine{21     \mbox{\hyperlink{classVkInfo_1_1MetricsRegistry}{MetricsRegistry}}\& registry\_;}
+\DoxyCodeLine{22     std::string filename\_;}
+\DoxyCodeLine{23     std::chrono::milliseconds interval\_;}
+\DoxyCodeLine{24     std::atomic<bool> running\_;}
+\DoxyCodeLine{25     std::thread worker\_;}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} run();}
+\DoxyCodeLine{28     std::string get\_current\_timestamp() \textcolor{keyword}{const};}
+\DoxyCodeLine{29 \};}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \} \textcolor{comment}{// namespace VkInfo}}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// METRICS\_LOGGER\_H\_}}
+
+\end{DoxyCode}

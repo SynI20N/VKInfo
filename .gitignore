@@ -1,0 +1,6 @@
+# --- VSCode Specific ---
+.vscode/*
+!.vscode/settings.json    # allow project settings if needed
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json

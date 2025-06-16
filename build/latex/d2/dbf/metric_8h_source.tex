@@ -1,0 +1,25 @@
+\hypertarget{metric_8h_source}{}\doxysection{metric.\+h}
+\label{metric_8h_source}\index{/home/leonid/Projects/VKInfo/VKInfoLib/include/metric.h@{/home/leonid/Projects/VKInfo/VKInfoLib/include/metric.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef METRIC\_H\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define METRIC\_H\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}export.h"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{namespace }VkInfo \{}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{class }VKINFO\_API \mbox{\hyperlink{classVkInfo_1_1IMetric}{IMetric}} \{}
+\DoxyCodeLine{11 \textcolor{keyword}{public}:}
+\DoxyCodeLine{12     \textcolor{keyword}{virtual} \mbox{\hyperlink{classVkInfo_1_1IMetric}{\string~IMetric}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{13     \textcolor{keyword}{virtual} std::string get\_name() \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{14     \textcolor{keyword}{virtual} std::string get\_value\_and\_reset() = 0;}
+\DoxyCodeLine{15 \};}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \} \textcolor{comment}{// namespace VkInfo}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// METRIC\_H\_}}
+
+\end{DoxyCode}
