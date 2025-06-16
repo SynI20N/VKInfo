@@ -1,22 +1,22 @@
 # 🔍 VKInfo — Metrics Scraping Library
 
-Asyncronous metrics scraper library written in C++
-Uses Qt5 for showcasing performance
+Asyncronous metrics scraper library written in C++ <br>
+(uses Qt5 for showcasing performance)
 
 ---
 
 ## 📁 Project Structure
 
-VKInfo/
-├── VKInfoLib/ # Core logic as a shared library
-├── VKInfoDriver/ # Executable that uses VKInfoLib
-├── VKInfoTest/ # Google Test-based unit tests
-├── bin/ # Binaries of VKInfoDriver
-├── lib/ # Libraries: GTest, VKInfoLib
-├── build/ # CMake build directory
-├── build.sh # Builds the project using CMake
-├── run.sh # Runs the VKInfoDriver binary
-└── test.sh # Runs unit tests with Google Test
+VKInfo/ <br>
+├── VKInfoLib/ # Core logic as a shared library <br>
+├── VKInfoDriver/ # Executable that uses VKInfoLib <br>
+├── VKInfoTest/ # Google Test-based unit tests <br>
+├── bin/ # Binaries of VKInfoDriver <br>
+├── lib/ # Libraries: GTest, VKInfoLib <br>
+├── build/ # CMake build directory <br>
+├── build.sh # Builds the project using CMake <br>
+├── run.sh # Runs the VKInfoDriver binary <br>
+└── test.sh # Runs unit tests with Google Test <br>
 
 ---
 
