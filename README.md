@@ -3,6 +3,17 @@
 Asyncronous metrics scraper library written in C++ <br>
 (uses Qt5 for showcasing performance)
 
+## Screenshots
+
+### Main Window
+
+![Main Window](/img/window.png)
+
+### Metrics Visualization
+
+![Metrics Visualization](/img/metrics.png)
+
+
 ---
 
 ## 📁 Project Structure
