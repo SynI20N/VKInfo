@@ -36,28 +36,32 @@
 \DoxyCodeLine{64         \textcolor{keywordflow}{return} name\_;}
 \DoxyCodeLine{65     \}}
 \DoxyCodeLine{66 }
-\DoxyCodeLine{72     std::string \mbox{\hyperlink{classVkInfo_1_1AtomicMetric_a6ea8de63ea21c4d6a8e3c30838e381db}{get\_value\_and\_reset}}()\textcolor{keyword}{ override }\{}
-\DoxyCodeLine{73         T val = value\_.exchange(0);}
-\DoxyCodeLine{74         \textcolor{keywordflow}{return} std::to\_string(val);}
-\DoxyCodeLine{75     \}}
-\DoxyCodeLine{76 }
-\DoxyCodeLine{77 \textcolor{keyword}{private}:}
-\DoxyCodeLine{78     std::string name\_;         }
-\DoxyCodeLine{79     std::atomic<T> value\_;     }
-\DoxyCodeLine{80     T max\_;                    }
-\DoxyCodeLine{81     T min\_;                    }
-\DoxyCodeLine{82 }
-\DoxyCodeLine{89     \textcolor{keywordtype}{void} validate(T\& value) \{}
-\DoxyCodeLine{90         \textcolor{keywordflow}{if} (value > max\_) \{}
-\DoxyCodeLine{91             \textcolor{keywordflow}{throw} std::domain\_error(\textcolor{stringliteral}{"{}metric value exceeds max value"{}});}
-\DoxyCodeLine{92         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (value < min\_) \{}
-\DoxyCodeLine{93             \textcolor{keywordflow}{throw} std::domain\_error(\textcolor{stringliteral}{"{}metric value underflows"{}});}
-\DoxyCodeLine{94         \}}
-\DoxyCodeLine{95     \}}
-\DoxyCodeLine{96 \};}
-\DoxyCodeLine{97 }
-\DoxyCodeLine{98 \} \textcolor{comment}{// namespace VkInfo}}
-\DoxyCodeLine{99 }
-\DoxyCodeLine{100 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// ATOMIC\_METRIC\_H\_}}
+\DoxyCodeLine{72     T \mbox{\hyperlink{classVkInfo_1_1AtomicMetric_ab728696a3775772c1696381a7acaa23a}{get\_value}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{73         \textcolor{keywordflow}{return} value\_;}
+\DoxyCodeLine{74     \}}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{81     std::string \mbox{\hyperlink{classVkInfo_1_1AtomicMetric_a6ea8de63ea21c4d6a8e3c30838e381db}{get\_value\_and\_reset}}()\textcolor{keyword}{ override }\{}
+\DoxyCodeLine{82         T val = value\_.exchange(0);}
+\DoxyCodeLine{83         \textcolor{keywordflow}{return} std::to\_string(val);}
+\DoxyCodeLine{84     \}}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86 \textcolor{keyword}{private}:}
+\DoxyCodeLine{87     std::string name\_;         }
+\DoxyCodeLine{88     std::atomic<T> value\_;     }
+\DoxyCodeLine{89     T max\_;                    }
+\DoxyCodeLine{90     T min\_;                    }
+\DoxyCodeLine{91 }
+\DoxyCodeLine{98     \textcolor{keywordtype}{void} validate(T\& value) \{}
+\DoxyCodeLine{99         \textcolor{keywordflow}{if} (value > max\_) \{}
+\DoxyCodeLine{100             \textcolor{keywordflow}{throw} std::domain\_error(\textcolor{stringliteral}{"{}metric value exceeds max value"{}});}
+\DoxyCodeLine{101         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (value < min\_) \{}
+\DoxyCodeLine{102             \textcolor{keywordflow}{throw} std::domain\_error(\textcolor{stringliteral}{"{}metric value underflows"{}});}
+\DoxyCodeLine{103         \}}
+\DoxyCodeLine{104     \}}
+\DoxyCodeLine{105 \};}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107 \} \textcolor{comment}{// namespace VkInfo}}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// ATOMIC\_METRIC\_H\_}}
 
 \end{DoxyCode}

@@ -110,6 +110,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acacb7ad7f17f3b0d855a9f31a6d517f1"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classVkInfo_1_1AtomicMetric.html#acacb7ad7f17f3b0d855a9f31a6d517f1">get_name</a> () const override</td></tr>
 <tr class="memdesc:acacb7ad7f17f3b0d855a9f31a6d517f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of the metric.  <a href="../../d1/db0/classVkInfo_1_1AtomicMetric.html#acacb7ad7f17f3b0d855a9f31a6d517f1">More...</a><br /></td></tr>
 <tr class="separator:acacb7ad7f17f3b0d855a9f31a6d517f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab728696a3775772c1696381a7acaa23a"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classVkInfo_1_1AtomicMetric.html#ab728696a3775772c1696381a7acaa23a">get_value</a> () const</td></tr>
+<tr class="memdesc:ab728696a3775772c1696381a7acaa23a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value of the metric.  <a href="../../d1/db0/classVkInfo_1_1AtomicMetric.html#ab728696a3775772c1696381a7acaa23a">More...</a><br /></td></tr>
+<tr class="separator:ab728696a3775772c1696381a7acaa23a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ea8de63ea21c4d6a8e3c30838e381db"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db0/classVkInfo_1_1AtomicMetric.html#a6ea8de63ea21c4d6a8e3c30838e381db">get_value_and_reset</a> () override</td></tr>
 <tr class="memdesc:a6ea8de63ea21c4d6a8e3c30838e381db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current value and resets it to zero atomically.  <a href="../../d1/db0/classVkInfo_1_1AtomicMetric.html#a6ea8de63ea21c4d6a8e3c30838e381db">More...</a><br /></td></tr>
 <tr class="separator:a6ea8de63ea21c4d6a8e3c30838e381db"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -223,6 +226,36 @@ template&lt;typename T &gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>std::string The metric name. </dd></dl>
 
 <p>Implements <a class="el" href="../../df/d52/classVkInfo_1_1IMetric.html#afb68b14804249b7dc087202502152f7b">VkInfo::IMetric</a>.</p>
+
+</div>
+</div>
+<a id="ab728696a3775772c1696381a7acaa23a" name="ab728696a3775772c1696381a7acaa23a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab728696a3775772c1696381a7acaa23a">&#9670;&nbsp;</a></span>get_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="../../d1/db0/classVkInfo_1_1AtomicMetric.html">VkInfo::AtomicMetric</a>&lt; T &gt;::get_value </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the value of the metric. </p>
+<dl class="section return"><dt>Returns</dt><dd>T - value of the metric </dd></dl>
 
 </div>
 </div>

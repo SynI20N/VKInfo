@@ -40,6 +40,8 @@ void \mbox{\hyperlink{classVkInfo_1_1AtomicMetric_a61b2df3c0774404fb9354887e3758
 \begin{DoxyCompactList}\small\item\em Sets the metric to a randomly generated value within its valid range. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classVkInfo_1_1AtomicMetric_acacb7ad7f17f3b0d855a9f31a6d517f1}{get\+\_\+name}} () const override
 \begin{DoxyCompactList}\small\item\em Returns the name of the metric. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classVkInfo_1_1AtomicMetric_ab728696a3775772c1696381a7acaa23a}{get\+\_\+value}} () const
+\begin{DoxyCompactList}\small\item\em Returns the value of the metric. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classVkInfo_1_1AtomicMetric_a6ea8de63ea21c4d6a8e3c30838e381db}{get\+\_\+value\+\_\+and\+\_\+reset}} () override
 \begin{DoxyCompactList}\small\item\em Returns the current value and resets it to zero atomically. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -100,6 +102,20 @@ std\+::string The metric name.
 
 Implements \mbox{\hyperlink{classVkInfo_1_1IMetric_afb68b14804249b7dc087202502152f7b}{Vk\+Info\+::\+IMetric}}.
 
+\mbox{\Hypertarget{classVkInfo_1_1AtomicMetric_ab728696a3775772c1696381a7acaa23a}\label{classVkInfo_1_1AtomicMetric_ab728696a3775772c1696381a7acaa23a}} 
+\index{VkInfo::AtomicMetric$<$ T $>$@{VkInfo::AtomicMetric$<$ T $>$}!get\_value@{get\_value}}
+\index{get\_value@{get\_value}!VkInfo::AtomicMetric$<$ T $>$@{VkInfo::AtomicMetric$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get\_value()}{get\_value()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classVkInfo_1_1AtomicMetric}{Vk\+Info\+::\+Atomic\+Metric}}$<$ T $>$\+::get\+\_\+value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the value of the metric. 
+
+\begin{DoxyReturn}{Returns}
+T -\/ value of the metric 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classVkInfo_1_1AtomicMetric_a6ea8de63ea21c4d6a8e3c30838e381db}\label{classVkInfo_1_1AtomicMetric_a6ea8de63ea21c4d6a8e3c30838e381db}} 
 \index{VkInfo::AtomicMetric$<$ T $>$@{VkInfo::AtomicMetric$<$ T $>$}!get\_value\_and\_reset@{get\_value\_and\_reset}}
 \index{get\_value\_and\_reset@{get\_value\_and\_reset}!VkInfo::AtomicMetric$<$ T $>$@{VkInfo::AtomicMetric$<$ T $>$}}

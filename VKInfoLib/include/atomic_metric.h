@@ -65,6 +65,15 @@ public:
     }
 
     /**
+     * @brief Returns the value of the metric.
+     * 
+     * @return T - value of the metric
+     */
+    T get_value() const {
+        return value_;
+    }
+
+    /**
      * @brief Returns the current value and resets it to zero atomically.
      * 
      * @return std::string The value (converted to string) before reset.

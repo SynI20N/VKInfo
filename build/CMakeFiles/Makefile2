@@ -251,9 +251,9 @@ CMakeFiles/doc_doxygen.dir/clean:
 # Target rules for target VKInfoDriver/CMakeFiles/VKInfoDriver.dir
 
 # All Build rule for target.
-VKInfoDriver/CMakeFiles/VKInfoDriver.dir/all: VKInfoLib/CMakeFiles/VKInfoLib.dir/all
 VKInfoDriver/CMakeFiles/VKInfoDriver.dir/all: VKInfoDriver/CMakeFiles/VKInfoDriver_autogen_timestamp_deps.dir/all
 VKInfoDriver/CMakeFiles/VKInfoDriver.dir/all: VKInfoDriver/CMakeFiles/VKInfoDriver_autogen.dir/all
+VKInfoDriver/CMakeFiles/VKInfoDriver.dir/all: VKInfoLib/CMakeFiles/VKInfoLib.dir/all
 	$(MAKE) $(MAKESILENT) -f VKInfoDriver/CMakeFiles/VKInfoDriver.dir/build.make VKInfoDriver/CMakeFiles/VKInfoDriver.dir/depend
 	$(MAKE) $(MAKESILENT) -f VKInfoDriver/CMakeFiles/VKInfoDriver.dir/build.make VKInfoDriver/CMakeFiles/VKInfoDriver.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/leonid/Projects/VKInfo/build/CMakeFiles --progress-num=1,2,3,4 "Built target VKInfoDriver"
