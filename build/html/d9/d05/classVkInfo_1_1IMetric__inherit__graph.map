@@ -1,4 +1,0 @@
-<map id="VkInfo::IMetric" name="VkInfo::IMetric">
-<area shape="rect" id="node1" title="Interface for all metric types." alt="" coords="40,5,148,32"/>
-<area shape="rect" id="node2" href="$d1/db0/classVkInfo_1_1AtomicMetric.html" title="A thread&#45;safe metric implementation using atomic variables." alt="" coords="5,80,183,107"/>
-</map>

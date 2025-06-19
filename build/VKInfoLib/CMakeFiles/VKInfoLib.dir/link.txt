@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -g --coverage -shared -Wl,-soname,libVKInfoLib.so -o libVKInfoLib.so CMakeFiles/VKInfoLib.dir/src/metrics_logger.cc.o CMakeFiles/VKInfoLib.dir/src/metrics_registry.cc.o

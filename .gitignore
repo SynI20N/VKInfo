@@ -1,6 +1,51 @@
 # --- VSCode Specific ---
 .vscode/*
-!.vscode/settings.json    # allow project settings if needed
-!.vscode/extensions.json
-!.vscode/launch.json
-!.vscode/tasks.json
+
+# Exclude build directory
+[Bb]uild/
+
+# Exclude gcov information
+coverage_report/
+*.info
+
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Linker files
+*.ilk
+
+# Debugger Files
+*.pdb
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# debug information files
+*.dwo

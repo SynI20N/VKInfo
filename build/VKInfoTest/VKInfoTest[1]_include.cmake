@@ -1,5 +1,0 @@
-if(EXISTS "/home/leonid/Projects/VKInfo/build/VKInfoTest/VKInfoTest[1]_tests.cmake")
-  include("/home/leonid/Projects/VKInfo/build/VKInfoTest/VKInfoTest[1]_tests.cmake")
-else()
-  add_test(VKInfoTest_NOT_BUILT VKInfoTest_NOT_BUILT)
-endif()
