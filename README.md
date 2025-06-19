@@ -24,7 +24,6 @@ VKInfo/ <br>
 ├── VKInfoTest/ # Google Test-based unit tests <br>
 ├── bin/ # Binaries of VKInfoDriver <br>
 ├── lib/ # Libraries: GTest, VKInfoLib <br>
-├── build/ # CMake build directory <br>
 ├── build.sh # Builds the project using CMake <br>
 ├── run.sh # Runs the VKInfoDriver binary <br>
 └── test.sh # Runs unit tests with Google Test <br>
@@ -35,11 +34,11 @@ VKInfo/ <br>
 
 This project is intended to run on **Debian-based Linux distributions** and requires the following:
 
-- [CMake](https://cmake.org/) `>= 4.0.3`
 - G++ compiler `>= 12.2.0`
+- [CMake](https://cmake.org/) `>= 4.0.3`
 - [GoogleTest](https://github.com/google/googletest) `1.17`
 - [Doxygen](https://www.doxygen.nl/) `1.14.0`
-- gcov / lcov for code coverage
+- [gcov / lcov](https://ps-group.github.io/cxx/coverage_gcc) for code coverage
 - [Qt5](https://www.qt.io/try-qt) `5.15.8`
 
 ---
@@ -56,7 +55,7 @@ To build the entire project (library, driver, and tests), simply run the provide
 
 ## Usage Instructions
 
-Once built, you can run the driver that queries and prints Vulkan system information:
+Once built, you can run the driver interface:
 
 ```bash
 ./run.sh
